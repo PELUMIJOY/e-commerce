@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "tittle": {
+    "title": {
       "type": "string"
     },
     "desc": {
@@ -53,7 +53,7 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "sub_catigories": {
+    "sub_categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::sub-catigory.sub-catigory",

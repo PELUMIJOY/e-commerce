@@ -4,7 +4,7 @@
   "info": {
     "singularName": "sub-catigory",
     "pluralName": "sub-catigories",
-    "displayName": "SubCatigory",
+    "displayName": "SubCategory",
     "description": ""
   },
   "options": {
@@ -12,20 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "tittle": {
+    "title": {
       "type": "string"
     },
     "products": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "sub_catigories"
+      "mappedBy": "sub_categories"
     },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "inversedBy": "sub_catigories"
+      "mappedBy": "sub_categories"
     }
   }
 }

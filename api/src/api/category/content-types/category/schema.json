@@ -4,28 +4,30 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "category"
+    "displayName": "category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "tittle": {
+    "title": {
       "type": "string"
     },
     "desc": {
       "type": "text"
     },
     "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "products": {
       "type": "relation",
@@ -33,11 +35,11 @@
       "target": "api::product.product",
       "mappedBy": "categories"
     },
-    "sub_catigories": {
+    "sub_categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::sub-catigory.sub-catigory",
-      "mappedBy": "categories"
+      "inversedBy": "categories"
     }
   }
 }
