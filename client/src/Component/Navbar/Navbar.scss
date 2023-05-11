@@ -1,103 +1,131 @@
-.navbar{
-   height: 80px; 
+.navbar {
+  //  height: 80px; 
 
-   .wrapper{
+  .wrapper {
     padding: 10px 30px;
     display: flex;
+    // flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 
-    
+    // .center_right-container {
+    //   border: 1px solid blue;
+    //   width: 100%;
+    //   display: flex;
+    //   justify-content: space-evenly;
+    // }
+
     .item {
       display: flex;
       align-items: center;
       font-size: 18px;
     }
-   
-    .left{
+
+    .left {
       display: flex;
       align-items: center;
       gap: 25px;
     }
 
-    .center{
+    .center {
       font-size: 30px;
       letter-spacing: 2px;
     }
 
-    .right{
+    .right {
       display: flex;
       align-items: center;
       gap: 25px;
 
-      #rightNav{
-       display: flex;
-       align-items: center;
-       gap: 25px
-       
+      #rightNav {
+        display: flex;
+        align-items: center;
+        gap: 25px
       }
-    .icons{
-      display: flex;
-      gap:15px;
-      color: #777;
-      cursor: pointer;
-    
 
-    .cartIcon{
-      position: relative;
+      .icons {
+        display: flex;
+        gap: 15px;
+        color: #777;
+        cursor: pointer;
 
-      span{
-         font-size: 12px;
-         width: 20px;
-         height: 20px;
-         border-radius: 50%;
-         background-color: #2879fe;
-         color: white;
-         position: absolute;
-         top:-10px;
-         right:-10px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
+
+        .cartIcon {
+          position: relative;
+
+          span {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            color: white;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
       }
     }
-  }
-   }
-   #mobile{
-    display: none;
-   }
-  //  #mobile i{
-  //  align-items: center;
-  //  }
 
-   @media(max-width:768px){
-    // .right{
-    //   position: relative;
-    // }
-    #rightNav {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-self: start;
-      position: fixed;
-      top:90px;
-      right: -200px;
-      width: 200px;
-      height:50vh;
-      background-color:white;
+    #mobile {
+      display: none;
     }
- #rightNav.active{
-        right: 0px;
+
+    //  #mobile i{
+    //  align-items: center;
+    //  }
+
+    @media(max-width:768px) {
+      .navbar{
+
+        .wrapper{
+          flex-direction: column-reverse;
+          .center_right-container {
+            border: 1px solid blue;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            #rightNav {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-self: start;
+              position: fixed;
+              padding-top: 20px;
+              top: 90px;
+              right: -200px;
+              width: 200px;
+              height: 40vh;
+              background-color: white;
+              z-index: 10;
+              /* ensures the div always displays over other element & not behind them */
+            }
       
+            #rightNav.active {
+              right: 0px;
+      
+            }
+      
+            #mobile {
+              display: block;
+            }
+      
+            #mobile i {
+              font-size: 24px;
+            }
+          }
       }
-
-    #mobile{
-      display: block;
-     }
-     #mobile i{
-    font-size: 24px;
-     }
+  
+      // .right{
+      //   position: relative;
+      // }
+    }
     }
   }
 }
-   
