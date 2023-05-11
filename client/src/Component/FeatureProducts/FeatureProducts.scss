@@ -1,11 +1,8 @@
 .featuredProducts {
   margin: 100px 200px;
-  // border: 1px solid red;
 
   .top {
     display: flex;
-    // flex-direction: column;
-
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
@@ -27,53 +24,25 @@
     gap: 50px;
   }
 
-  @media(max-width: 768px) {
-    .featuredProducts {
-      // margin: 100px 200px;
-      width: 100%;
-      margin: 10px 20px;
-    }
-
-    .top {
-      flex-direction: column;
-      width: 100%;
-    }
-
-    h1 {
-      flex: none;
-      width: 100%;
-    }
-
-    p {
-      flex: none;
-      width: 100%;
-      padding: 1rem;
-    }
-
-  }
-
-  @media(max-width: 400px) {
-    .featuredProducts {
-      width: 800px;
-      // margin:0px 0px;
-    }
-
-    .top {
-      width: 100%;
-
-      h1 {
-        width: 300px;
-        font-size: 20px;
-        font-weight: 700;
-      }
-
-      p {
-        width: 250px;
-        font-size: 12px;
-        font-weight: 500;
-
-      }
-    }
-
-  }
-}
+          }
+          @media screen and (max-width: 768px) {
+            .featuredProducts {
+              margin: 100px 30px;
+            }
+        
+            .top {
+              flex-direction: column;
+            }
+        
+            h1 {
+              flex: none;
+              width: 100%;
+              font-size: 30px;
+            }
+        
+            p {
+              flex: none;
+              width: 100%;
+            }
+        
+          }

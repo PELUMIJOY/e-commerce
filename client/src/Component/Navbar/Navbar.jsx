@@ -49,52 +49,114 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div className='center_right-container'>
-          <div className='center'>
-            <Link className='link' to='/'>
-              JOYCESTORE
-            </Link>
-          </div>
-          <div className='right'>
-            <div
-              id='rightNav'
-              className={state.clicked ? '#rightNav active' : 'rightNav'}
-            >
-              <div className='item'>
-                <Link className='link' to='/'>
-                  Homepage
-                </Link>
-              </div>
-              <div className='item'>
-                <Link className='link' to='/'>
-                  About
-                </Link>
-              </div>
-              <div className='item'>
-                <Link className='link' to='/'>
-                  Contact
-                </Link>
-              </div>
-              <div className='item'>
-                <Link className='link' to='/'>
-                  Stores
-                </Link>
-              </div>
-              <div className='icons'>
-                <SearchIcon />
-                <PersonOutlineOutlinedIcon />
-                <FavoriteBorderIcon />
-                <div className='cartIcon' onClick={() => setOpen(!open)}>
-                  <ShoppingCartOutlinedIcon />
-                  <span>{products.length}</span>
-                </div>
+
+        <div className='center show-on-lg-screen'>
+          <Link className='link' to='/'>
+            JOYCESTORE
+          </Link>
+        </div>
+
+
+        <div className='show-on-lg-screen'>
+        <div className='center show-on-sm-screen'>
+          <Link className='link' to='/'>
+            JOYCESTORE
+          </Link>
+        </div>
+        <div className='right'>
+          <div
+            id='rightNav'
+            className={state.clicked ? '#rightNav active' : 'rightNav'}
+          >
+            <div className='item'>
+              <Link className='link' to='/'>
+                Homepage
+              </Link>
+            </div>
+            <div className='item'>
+              <Link className='link' to='/'>
+                About
+              </Link>
+            </div>
+            <div className='item'>
+              <Link className='link' to='/'>
+                Contact
+              </Link>
+            </div>
+            <div className='item'>
+              <Link className='link' to='/'>
+                Stores
+              </Link>
+            </div>
+            <div className='icons'>
+              <SearchIcon />
+              <PersonOutlineOutlinedIcon />
+              <FavoriteBorderIcon />
+              <div className='cartIcon' onClick={() => setOpen(!open)}>
+                <ShoppingCartOutlinedIcon />
+                <span>{products.length}</span>
               </div>
             </div>
-            <div id='mobile' onClick={handleClick}>
-              <i
-                id='bar'
-                className={state.clicked ? 'fas fa-times' : 'fas fa-bars'}
-              ></i>
+          </div>
+          <div id='mobile' onClick={handleClick}>
+            <i
+              id='bar'
+              className={state.clicked ? 'fas fa-times' : 'fas fa-bars'}
+            ></i>
+          </div>
+        </div>
+        </div>
+
+
+        {/* SHOW ONLY ON MEDIUM AND SMALL SCREEN */}
+        <div className='show-on-sm-screen'>
+          <div className='center_right-container'>
+            <div className='center'>
+              <Link className='link' to='/'>
+                JOYCESTORE
+              </Link>
+            </div>
+            <div className='right'>
+              <div
+                id='rightNav'
+                className={state.clicked ? '#rightNav active' : 'rightNav'}
+              >
+                <div className='item'>
+                  <Link className='link' to='/'>
+                    Homepage
+                  </Link>
+                </div>
+                <div className='item'>
+                  <Link className='link' to='/'>
+                    About
+                  </Link>
+                </div>
+                <div className='item'>
+                  <Link className='link' to='/'>
+                    Contact
+                  </Link>
+                </div>
+                <div className='item'>
+                  <Link className='link' to='/'>
+                    Stores
+                  </Link>
+                </div>
+                <div className='icons'>
+                  <SearchIcon />
+                  <PersonOutlineOutlinedIcon />
+                  <FavoriteBorderIcon />
+                  <div className='cartIcon' onClick={() => setOpen(!open)}>
+                    <ShoppingCartOutlinedIcon />
+                    <span>{products.length}</span>
+                  </div>
+                </div>
+              </div>
+              <div id='mobile' onClick={handleClick}>
+                <i
+                  id='bar'
+                  className={state.clicked ? 'fas fa-times' : 'fas fa-bars'}
+                ></i>
+              </div>
             </div>
           </div>
         </div>

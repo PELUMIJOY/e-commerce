@@ -1,20 +1,20 @@
 .navbar {
-  //  height: 80px; 
 
   .wrapper {
     padding: 10px 30px;
     display: flex;
-    // flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    
+    .show-on-lg-screen{
+      display: block;
 
-    // .center_right-container {
-    //   border: 1px solid blue;
-    //   width: 100%;
-    //   display: flex;
-    //   justify-content: space-evenly;
-    // }
+    }
+    .show-on-sm-screen{
+      display: none;
+      width: 100%;
+    }
 
     .item {
       display: flex;
@@ -76,56 +76,62 @@
       display: none;
     }
 
-    //  #mobile i{
-    //  align-items: center;
-    //  }
+  }
+}
 
-    @media(max-width:768px) {
-      .navbar{
+@media screen and (max-width:768px) {
+  .navbar{
 
-        .wrapper{
-          flex-direction: column-reverse;
-          .center_right-container {
-            border: 1px solid blue;
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
+    .wrapper{
+      padding-inline: 20px;
+      flex-direction: column-reverse;
 
-            #rightNav {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-self: start;
-              position: fixed;
-              padding-top: 20px;
-              top: 90px;
-              right: -200px;
-              width: 200px;
-              height: 40vh;
-              background-color: white;
-              z-index: 10;
-              /* ensures the div always displays over other element & not behind them */
+            .show-on-lg-screen{
+              display: none;
             }
-      
-            #rightNav.active {
-              right: 0px;
-      
-            }
-      
-            #mobile {
+            .show-on-sm-screen{
               display: block;
+
+              .center_right-container {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+              }
             }
-      
-            #mobile i {
-              font-size: 24px;
-            }
-          }
-      }
+
+
+                        .left {
+                          gap: 15px;
+                          font-size: 0.85rem;
+                        }
+
+        #rightNav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-self: start;
+          position: fixed;
+          padding-top: 20px;
+          top: 90px;
+          right: -200px;
+          width: 200px;
+          height: 40vh;
+          background-color: white;
+          z-index: 10; /* ensures the div always displays over other element & not behind them */
+        }
   
-      // .right{
-      //   position: relative;
-      // }
-    }
-    }
+        #rightNav.active {
+          right: 0px;
+  
+        }
+  
+        #mobile {
+          display: block;
+        }
+  
+        #mobile i {
+          font-size: 24px;
+        }
+  }
   }
 }
