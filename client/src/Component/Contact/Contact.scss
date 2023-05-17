@@ -33,3 +33,20 @@
     }
 }
 }
+@media screen and (max-width: 400px) {
+    .contact {
+        .wrapper {
+            flex-direction: column;
+            gap: 10px;
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        .wrapper {
+            width: 80%;
+        }
+    }
+}

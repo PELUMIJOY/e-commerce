@@ -19,7 +19,7 @@ module.exports = createCoreController('api::order.order', ({strapi}) =>({
             const lineItems = await Promise.all(
                 products.map(async (product) => { 
                  const item = await strapi.service("api::product.product").findOne(product.id)
-                 console.log(item)
+                 
                  return {
 
                 

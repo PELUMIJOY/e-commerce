@@ -23,7 +23,7 @@
     justify-content: center;
     gap: 50px;
   }
-
+}
   @media(max-width: 768px){
     .featuredProducts{
       width: 100%;
@@ -39,36 +39,28 @@
     }
     p{
       flex: none;
-      width: 100%;
+      width: 90%;
       padding: 2rem;
+      margin-right: 10px;
     }
   
 }
 
-  @media(max-width: 280px){
-    .featuredProducts{
-      width: 800px;
-      // border: 1px solid red;
-      margin:0px 0px;
-    }
-
-    .top{
-      
-      width: 100%;
-      // border: 1px solid red;
-    
-    h1{
-     width: 300px;
-     font-size: 20px;
-     font-weight: 700;
-    }
-    p{
-      width: 250px;
-      font-size: 12px;
-      font-weight: 500;
-    
-    }
+@media(max-width: 600px){
+  .featuredProducts{
+    width: 100%;
+    margin:10px 20px;
   }
+  .bottom{
+    width: 80%;
+    padding: 0.3rem;
 
   }
+
+  p{
+    flex: none;
+    width: 80%;
+    padding: 2rem;
+  }
+
 }

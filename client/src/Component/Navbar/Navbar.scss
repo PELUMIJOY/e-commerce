@@ -1,11 +1,20 @@
 .navbar{
-   height: 80px; 
+  //  height: 80px; 
 
    .wrapper{
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .show-on-lg-screen{
+      display: block;
+
+    }
+    .show-on-sm-screen{
+      display: none;
+      width: 100%;
+    }
 
     
     .item {
@@ -66,38 +75,92 @@
    #mobile{
     display: none;
    }
-  //  #mobile i{
-  //  align-items: center;
-  //  }
-
-   @media(max-width:768px){
-    // .right{
-    //   position: relative;
-    // }
-    #rightNav {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-self: start;
-      position: fixed;
-      top:90px;
-      right: -200px;
-      width: 200px;
-      height:50vh;
-      background-color:white;
-    }
- #rightNav.active{
-        right: 0px;
-      
-      }
-
-    #mobile{
-      display: block;
-     }
-     #mobile i{
-    font-size: 24px;
-     }
-    }
   }
 }
-   
+  @media screen and (max-width:768px) {
+    .navbar{
+  
+      .wrapper{
+        padding-inline: 20px;
+        flex-direction: column-reverse;
+  
+              .show-on-lg-screen{
+                display: none;
+              }
+              .show-on-sm-screen{
+                display: block;
+  
+                .center_right-container {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+                }
+              }
+  
+  
+                          .left {
+                            gap: 15px;
+                            font-size: 0.85rem;
+                          }
+  
+          #rightNav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: start;
+            position: fixed;
+            padding-top: 20px;
+            top: 90px;
+            right: -200px;
+            width: 200px;
+            height: 40vh;
+            background-color: white;
+            z-index: 10; /* ensures the div always displays over other element & not behind them */
+          }
+    
+          #rightNav.active {
+            right: 0px;
+    
+          }
+    
+          #mobile {
+            display: block;
+          }
+    
+          #mobile i {
+            font-size: 24px;
+          }
+     
+    }
+    }
+  }
+
+  @media screen and (max-width:600px){
+    .navbar{
+  
+      .wrapper{
+        // padding-inline: 20px;
+        // flex-direction: column-reverse;
+  
+              // .show-on-lg-screen{
+              //   display: none;
+              // }
+              // .show-on-sm-screen{
+              //   display: block;
+  
+              //   .center_right-container {
+              //     width: 100%;
+              //     display: flex;
+              //     justify-content: space-between;
+              //   }
+              // }
+  
+  
+                          .left {
+                            display: none;
+                          }
+                        }
+
+  }
+
+  }
